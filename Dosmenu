@@ -1,0 +1,111 @@
+import curses.ascii
+from curses.ascii import isdigit
+import os
+from random import randint
+import time
+import timeit
+import platform
+start = timeit.default_timer()
+usr=(platform.system())
+str1 = """
+
+ <html>
+    <body>
+        <title>Thanks for downloading</title>
+        <h1>Hey thanks for downloading my DDos-Attacker</h1>
+        <button type="button" 
+              onclick="window.open('', '_self', ''); window.close();">Close Window</button>
+        <d1>Warning when using this program, the creator shall not be held responsible for any cause of damage or anything caused by this program. <h1>Use responsibly!!!</h1></d1>
+
+        <h1></h1>
+        <h1></h1>
+        <p></p>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta http-equiv="refresh" content="5">
+    </body>
+ </html>
+
+
+    """
+data=str1
+if usr=="Windows":
+    clear = lambda: os.system('cls')
+    clear()
+elif usr=="Linux":
+    clear = lambda: os.system('clear')
+    clear()
+def maina():
+      stop = timeit.default_timer()
+      clear()
+      print('Time runing:', round(stop - start))
+      if __name__=='__main__':
+        main()
+def computer():
+    import webbrowser
+    url = "https://github.com/superdargon33/DDos-Attacker/archive/refs/heads/main.zip"
+    webbrowser.open(url, new=0, autoraise=True)
+    print("DDos-Attacker is downloaded!")
+    f = open("dos.html", "w")
+    with open('dos.html', 'a') as f:
+        f.write(data)
+    f.close()
+    
+    f = open("dos.html", "r")
+    print(f.read())
+    import subprocess
+    import os
+
+    url = "dos.html"
+    # or a file on your computer
+    # url = "/Users/yourusername/Desktop/index.html
+     # should work on 
+    webbrowser.open(url, new=0, autoraise=True)
+    
+    print("Test!")
+    time.sleep(10)
+    maina()
+def main():  
+    while True:
+      gat = 0
+      print("_" * 10, "Welcome!", "_" * 10)
+      gat = input("1=Launch 2=Exit")
+      if gat.isdigit():
+        if gat == "2":
+          print("Turning off")
+          time.sleep(1)
+          exit()
+        elif gat == "1":
+          print("Hey")
+          nal=0
+          lal=randint(40,60)
+          nav=10
+          lak=0
+          while True:
+             tm=randint(1,5)
+             print("Loading components...")
+             if nal<=lal:
+                print("[Files]:",round((nal/lal)*100),"%","[",nal,"of",lal,"]")
+                
+                nal+=1
+                time.sleep(tm/10)
+                clear()
+             elif nal>=lal:
+                print("Done")
+                if usr!="Linux":
+                    computer()
+                else:
+                   print("Sorry your system is incompatible of this program, Try again with a windows system!")
+                   break
+        else:
+          print("Invalid number!")
+          time.sleep(1)
+          clear()
+      else:
+        print("Invalid characters")
+        print("Try again!")
+        time.sleep(1)
+        clear()
+    
+main()
+
